@@ -4,7 +4,7 @@ from pydantic import BaseModel
 
 app = FastAPI(
     title="AI DevOps Automation Platform",
-    description="Starter API for the AI DevOps portfolio project.",
+    description="Starter API for the AI DevOps project.",
     version="0.1.0",
 )
 
