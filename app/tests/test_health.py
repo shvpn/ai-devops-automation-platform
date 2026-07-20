@@ -13,9 +13,10 @@ def test_health_check_returns_ok() -> None:
     assert response.json() == {"status": "ok"}
 
 
-def test_ask_endpoint_returns_placeholder_answer() -> None:
+def test_ask_endpoint_returns_support_answer() -> None:
     response = client.post("/ask", json={"question": "How do I reset VPN password?"})
 
     assert response.status_code == 200
-    assert response.json()["question"] == "How do I reset VPN password?"
-    assert "placeholder response" in response.json()["answer"]
+    assert response.json() == {
+        "answer": "Check the account settings or contact IT support."
+    }

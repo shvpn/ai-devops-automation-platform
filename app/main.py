@@ -21,6 +21,5 @@ def health_check() -> dict[str, str]:
 @app.post("/ask")
 def ask_question(request: AskRequest) -> dict[str, str]:
     return {
-        "question": request.question,
-        "answer": "This is a placeholder response. AI integration will be added later.",
+        "answer": "Check the account settings or contact IT support.",
     }
